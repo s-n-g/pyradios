@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import re
 from setuptools import setup
 from setuptools import find_packages
@@ -8,12 +9,12 @@ DESCRIPTION = "Python client for the https://api.radio-browser.info"
 
 def get_version():
     content = open("pyradios/__init__.py").read()
-    mo = re.search(r"__version__\s+=\s+'([^']+)'", content)
+    mo = re.search(r"[0-9]+, [0-9]+, [0-9]+", content)
     if not mo:
         raise RuntimeError(
                 'Unable to find version string in pyradios/__init__.py'
             )
-    return mo[1]
+    return mo.group(0).replace(', ', '.')
 
 
 def readme():

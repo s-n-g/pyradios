@@ -2,7 +2,9 @@ import logging
 from logging import NullHandler
 from pyradios.radios import RadioBrowser
 
-__version__ = "0.0.22"
+version_info = (0, 0, 22)
+
+__version__ = version = '.'.join(map(str, version_info))
 
 __all__ = ["RadioBrowser"]
 

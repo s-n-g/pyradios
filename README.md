@@ -1,5 +1,10 @@
 # Pyradios
 
+Adjusting **Pyradios** for python 2.
+
+Everyting seems to be working but **mock**, but as far as I understand this module is for *tests* only, so no real setback...
+
+
 ![Upload Python Package](https://github.com/andreztz/pyradios/workflows/Upload%20Python%20Package/badge.svg)
 ![Python package](https://github.com/andreztz/pyradios/workflows/Python%20package/badge.svg)
 

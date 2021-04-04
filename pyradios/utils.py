@@ -1,6 +1,5 @@
 from functools import wraps
 
-
 types = {
     "search": {
         "name": str,
@@ -63,8 +62,9 @@ def bool_to_string(b):
 
 
 def snake_to_camel(s):
-    first, *others = s.split("_")
-    return "".join([first.lower(), *map(str.title, others)])
+    parts = s.split("_")
+    parts[0] = parts[0].lower()
+    return "".join(parts)
 
 
 def radio_browser_adapter(**kwargs):
